@@ -1,0 +1,47 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+get_all_todos:
+  path: /api/todo/get_all
+  controller: App\Controller\TodoController::getAll
+  methods: GET
+
+add_todo:
+  path: /api/todo/add
+  controller: App\Controller\TodoController::add
+  methods: POST
+
+update_todo:
+  path: /api/todo/update/{id}
+  controller: App\Controller\TodoController::update
+  methods: PUT
+
+delete_todo:
+  path: /api/todo/delete/{id}
+  controller: App\Controller\TodoController::delete
+  methods: DELETE
+
+add_many_todos:
+  path: /api/todo/add_many
+  controller: App\Controller\TodoController::addMany
+  methods: POST
+
+get_by_email:
+  path: /api/todo/get_by_email
+  controller: App\Controller\TodoController::getByEmail
+
+get_todo:
+  path: /api/todo/get/{id}
+  controller: App\Controller\TodoController::getOne
+  methods: GET
+
+register:
+  path: /auth/register
+  controller: App\Controller\UserController::register
+  methods: GET
+
+login:
+  path: /auth/login
+  controller: App\Controller\UserController::login
+  methods: GET
